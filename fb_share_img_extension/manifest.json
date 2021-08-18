@@ -1,0 +1,22 @@
+{
+    "name": "My first extension",
+    "description": "Shows a menu item",
+    "version": "1.0",
+    "permissions": ["contextMenus", "activeTab"],
+    "icons": {
+        "16": "share16.png",
+        "48": "share48.png",
+        "64": "share64.png",
+        "128": "share128.png"
+    },
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://www.google.com/*", "*://www.youtube.com/*"],
+            "js": ["index.js"]
+        
+    }],
+    "manifest_version": 2
+}
